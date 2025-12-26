@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #111111;
+    color: #ffffff;
+}
+
+.site-header {
+    background: #111111;
+    color: #d4af37;
+    padding: 25px 20px;
+}
+
+.brand h1 {
+    margin: 0;
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+.brand p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+nav {
+    margin-top: 12px;
+}
+
+nav a {
+    color: #ffffff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    padding: 30px 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    color: #d4af37;
+    font-size: 28px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #d4af37;
+    color: #111111;
+    padding: 12px 26px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn:hover {
+    background: #b8962e;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.highlights div {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.highlights div img {
+    border-radius: 10px;
+}
+
+.highlights div:hover {
+    transform: translateY(-4px);
+}
+
+.notice {
+    margin-top: 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.price-note {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+footer {
+    background: #0d0d0d;
+    padding: 15px;
+    text-align: center;
+    color: #cccccc;
+    margin-top: 50px;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+    margin: 20px auto;
+    border-radius: 2px;
+}

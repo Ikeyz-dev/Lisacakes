@@ -1,0 +1,41 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #fdf8f5;
+}
+
+header {
+  background: #c96b6b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+}
+
+#menuGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#chatBox {
+  height: 200px;
+  overflow-y: auto;
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}

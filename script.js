@@ -11,6 +11,10 @@ const menu = [
   {
     name: "Parfait",
     img: "https://images.unsplash.com/photo-1488477181946-6428a0291777"
+  },
+  {
+    name: "Doughnuts",
+    img: "https://images.unsplash.com/photo-1551024601-bec78aea704b"
   }
 ];
 

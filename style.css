@@ -1,14 +1,42 @@
 body {
-  font-family: Arial;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #fdf8f5;
+  background: #fff8f6;
 }
 
-header {
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.nav a {
   background: #c96b6b;
   color: white;
-  padding: 20px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.hero {
   text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+}
+
+.btn {
+  display: inline-block;
+  background: #c96b6b;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
 section {
@@ -17,19 +45,25 @@ section {
 
 #menuGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 15px;
 }
 
 .card {
   background: white;
-  padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .card img {
   width: 100%;
-  border-radius: 10px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card h4 {
+  padding: 10px;
 }
 
 #chatBox {
@@ -38,4 +72,5 @@ section {
   background: white;
   padding: 10px;
   margin-bottom: 10px;
+  border-radius: 10px;
 }

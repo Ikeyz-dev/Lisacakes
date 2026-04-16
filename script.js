@@ -17,7 +17,7 @@ const MENU = [
     {
         name: 'Sausage Rolls', cat: 'pastry', tag: 'Pastry',
         desc: 'Crispy buttery rolls wrapped around seasoned sausage. Great for parties and snacking.',
-        img: 'https://images.unsplash.com/photo-1600628421055-4d30de868b8f?w=500&q=80',
+        img: 'https://i.ibb.co/ZzWBvY7f/c29dce535071760c500eab7550906cfc-1.jpg',
         alt: 'Freshly baked sausage rolls'
     },
     {

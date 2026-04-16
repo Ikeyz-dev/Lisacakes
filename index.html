@@ -1,35 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lisa Cakes & More</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lisa Cakes & More — Fresh • Delicious • Reliable</title>
+
+<!-- Fonts: Google Fonts with full system-font fallback chain -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<header class="nav">
-  <h2>🎂 Lisa Cakes & More</h2>
-  <a href="https://wa.me/2347085950959" target="_blank">Order</a>
-</header>
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-logo">🎂 Lisa <span>Cakes</span> & More</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" onclick="closeNav()">Home</a></li>
+    <li><a href="#menu" onclick="closeNav()">Menu</a></li>
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#order" onclick="closeNav()">Order</a></li>
+  </ul>
+  <a href="https://wa.me/2347085950959" target="_blank" class="nav-cta">🟢 Order on WhatsApp</a>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-<section class="hero">
-  <h1>Baked with love ❤️</h1>
-  <p>Fresh pastries, cakes & catering for every occasion</p>
-  <a href="https://wa.me/2347085950959" target="_blank" class="btn">Order on WhatsApp</a>
+<!-- ══ HERO ══ -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">🎂 Fresh · Delicious · Reliable</div>
+    <h1 class="hero-title">Baked with<br><em>love</em>, made for<br>every moment</h1>
+    <p class="hero-sub">Premium pastries, desserts, and catering for your celebrations, parties, and everyday indulgence — freshly prepared with care.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">🎂 Custom Cakes</span>
+      <span class="hero-pill">🥧 Meat Pies</span>
+      <span class="hero-pill">🍩 Doughnuts</span>
+      <span class="hero-pill">🍽️ Event Catering</span>
+    </div>
+    <div class="hero-btns">
+      <a href="https://wa.me/2347085950959" target="_blank" class="btn-primary">🟢 Order on WhatsApp</a>
+      <button class="btn-secondary" onclick="openChat()">💬 Chat with Us</button>
+    </div>
+  </div>
+
+  <div class="hero-images">
+    <div class="hi-card">
+      <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=600&q=80" alt="Meat Pie" loading="lazy">
+      <span class="img-lbl">Meat Pie</span>
+    </div>
+    <div class="hi-card">
+      <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80" alt="Cupcakes" loading="lazy">
+      <span class="img-lbl">Cupcakes</span>
+    </div>
+    <div class="hi-card">
+      <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="Parfait" loading="lazy">
+      <span class="img-lbl">Parfait</span>
+    </div>
+    <div class="hi-card">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Small Chops" loading="lazy">
+      <span class="img-lbl">Small Chops</span>
+    </div>
+  </div>
 </section>
 
+<!-- ══ MENU ══ -->
 <section id="menu">
-  <h2>Our Menu</h2>
-  <div id="menuGrid"></div>
+  <div class="section-tag">Our Menu</div>
+  <h2 class="section-title">Crafted with the <em>finest</em> ingredients</h2>
+  <p class="section-sub">From flaky meat pies to luscious cakes and full event catering — every item is freshly prepared with care and precision.</p>
+
+  <div class="cat-row">
+    <button class="cat-btn active" onclick="filterMenu('all',this)">All Items</button>
+    <button class="cat-btn" onclick="filterMenu('pastry',this)">Pastries</button>
+    <button class="cat-btn" onclick="filterMenu('dessert',this)">Desserts</button>
+    <button class="cat-btn" onclick="filterMenu('catering',this)">Catering</button>
+  </div>
+
+  <div class="menu-grid" id="menuGrid"></div>
 </section>
 
-<section id="chat">
-  <h2>Chat Assistant</h2>
-  <div id="chatBox"></div>
-  <input type="text" id="userInput" placeholder="Ask something...">
-  <button onclick="sendMessage()">Send</button>
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="about-img-wrap">
+    <img class="about-img-main"
+      src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700&q=80"
+      alt="Lisa Cakes — freshly baked cake" loading="lazy">
+    <div class="about-badge">
+      <div class="num">500+</div>
+      <div class="lbl">Events Served</div>
+    </div>
+  </div>
+  <div>
+    <div class="section-tag">Our Story</div>
+    <h2 class="section-title">Quality you can <em>taste</em></h2>
+    <p class="section-sub">Lisa Cakes & More is a customer-focused food brand committed to delivering fresh, delicious, and hygienically prepared food for everyday enjoyment and special events — every order handled with care, precision, and a passion for quality.</p>
+    <div class="about-values">
+      <div class="about-value">
+        <div class="av-icon">🌿</div>
+        <div class="av-text">
+          <h4>Only the Freshest Ingredients</h4>
+          <p>Carefully selected ingredients ensure every cake, pastry, or meal meets our high standards of flavor and consistency.</p>
+        </div>
+      </div>
+      <div class="about-value">
+        <div class="av-icon">✨</div>
+        <div class="av-text">
+          <h4>Hygienic & Professional</h4>
+          <p>Every product is prepared in a clean, controlled environment with proper food-handling practices — safety without compromise.</p>
+        </div>
+      </div>
+      <div class="about-value">
+        <div class="av-icon">🎉</div>
+        <div class="av-text">
+          <h4>Made for Every Occasion</h4>
+          <p>From small personal orders to large event requests, every detail is managed to deliver satisfaction and a memorable experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- ══ ORDER ══ -->
+<section id="order">
+  <div class="section-tag">Place an Order</div>
+  <h2 class="section-title">Ready to <em style="color:var(--pink)">order?</em></h2>
+  <p class="section-sub">Reach us on WhatsApp or chat with our AI assistant for menu questions, recommendations, and more.</p>
+  <div class="order-cards">
+    <a href="https://wa.me/2347085950959" target="_blank" class="order-card">
+      <div class="order-icon wa">💬</div>
+      <div>
+        <div class="order-label">Order on WhatsApp</div>
+        <div class="order-sublabel">+234 708 595 0959</div>
+      </div>
+    </a>
+    <button class="order-card" onclick="openChat()">
+      <div class="order-icon ai">🎂</div>
+      <div>
+        <div class="order-label">Chat with AI Assistant</div>
+        <div class="order-sublabel">Ask about menus & pricing</div>
+      </div>
+    </button>
+  </div>
+  <p class="order-note">🎂 Cakes are available on request — limited slots apply.</p>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="f-logo">🎂 Lisa <span>Cakes</span> & More</div>
+  <p>© 2025 Lisa Cakes & More · Fresh · Delicious · Reliable</p>
+  <p style="color:rgba(255,255,255,0.2);font-size:11px">AI-powered ✦</p>
+</footer>
+
+<!-- ══ CHAT FAB ══ -->
+<button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Open AI chat">
+  🎂
+  <div class="fab-badge"></div>
+</button>
+
+<!-- ══ CHAT PANEL ══ -->
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div class="chat-head-av">🎂</div>
+    <div class="chat-head-info">
+      <h4>Lisa's Assistant</h4>
+      <p>Always here to help · Instant replies</p>
+    </div>
+    <button class="chat-x" onclick="closeChat()" aria-label="Close chat">✕</button>
+  </div>
+
+  <div class="chat-chips">
+    <button class="cc" onclick="cChip('What do you sell?')">🧁 Menu</button>
+    <button class="cc" onclick="cChip('How do I place an order?')">🛒 How to Order</button>
+    <button class="cc" onclick="cChip('Do you do event catering?')">🎉 Catering</button>
+    <button class="cc" onclick="cChip('Are custom cakes available?')">🎂 Cakes</button>
+    <button class="cc" onclick="cChip('What are your prices?')">💰 Prices</button>
+  </div>
+
+  <div class="chat-msgs" id="chatMsgs">
+    <div class="cm">
+      <div class="cav b">🎂</div>
+      <div class="cb b">
+        Hi there! 👋 Welcome to <strong>Lisa Cakes & More</strong>!<br><br>
+        I'm the AI assistant here. Ask me about our pastries, desserts, catering — or tap a quick button above to get started! 🍰
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-inp-wrap">
+    <div class="chat-inp-inner">
+      <textarea id="cInput" rows="1" placeholder="Ask about cakes, prices, catering…" onkeydown="cKey(event)" oninput="cResize(this)"></textarea>
+    </div>
+    <button class="csend" onclick="cSend()" aria-label="Send message">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

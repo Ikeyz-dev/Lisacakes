@@ -11,7 +11,7 @@ const MENU = [
     {
         name: 'Meat Pies', cat: 'pastry', tag: 'Pastry',
         desc: 'Golden flaky pastry filled with savory spiced meat. A classic Nigerian snack done right.',
-        img: 'https://images.unsplash.com/photo-1613478223719-2ab802602347?w=500&q=80',
+        img: 'https://ibb.co/pj3HSjT2',
         alt: 'Golden brown meat pie on a rustic plate'
     },
     {
